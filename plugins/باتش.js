@@ -1,19 +1,24 @@
+نص الملف باتش عرض.js:
+
 import fs from 'fs';
 import path from 'path';
 
-// دالة لقراءة آخر الأخطاء من ملف السجل
-let getErrorLogs = async () => {
-    let logFilePath = path.join('logs', 'error.log');
+let displayFileContent = async (filename) => {
+    let filePath = path.join('plugins', filename);
 
     try {
-        // التحقق من وجود ملف السجل
-        await fs.promises.access(logFilePath, fs.constants.F_OK);
-
-        // قراءة محتوى ملف السجل
-        let logData = await fs.promises.readFile(logFilePath, 'utf8');
-        return logData.split('\n').slice(-10).join('\n'); // قراءة آخر 10 سطور فقط
+        // التحقق من وجود الملف أولاً
+        await fs.promises.access(filePath, fs.constants.F_OK);
     } catch (err) {
-        throw new Error(`فشل في قراءة ملف السجل: ${err.message}`);
+        throw new Error(`الملف ${filename} غير موجود.`);
+    }
+
+    try {
+        // قراءة المحتوى الحالي للملف
+        let fileContent = await fs.promises.readFile(filePath, 'utf8');
+        return fileContent;
+    } catch (err) {
+        throw new Error(`فشل في قراءة الملف ${filename}: ${err.message}`);
     }
 };
 
@@ -21,18 +26,24 @@ let handler = async (m, { isROwner, usedPrefix, command, text }) => {
     await m.reply(global.wait);
     if (!isROwner) return;
 
+    if (!text) {
+        throw `يرجى تحديد اسم الملف المراد عرضه، مثال:\n${usedPrefix + command} example.js`;
+    }
+
+    let filename = text.trim() + '.js';
+
     try {
-        let errorLogs = await getErrorLogs();
-        m.reply(`آخر الأخطاء:\n\n${errorLogs}`);
+        let fileContent = await displayFileContent(filename);
+        m.reply(`نص الملف ${filename}:\n\n${fileContent}`);
     } catch (e) {
-        console.error(`حدث خطأ أثناء عرض الأخطاء: ${e.message}`);
-        m.reply(`حدث خطأ أثناء عرض الأخطاء: ${e.message}`);
+        console.error(`حدث خطأ أثناء عرض الملف ${filename}: ${e.message}`);
+        m.reply(`حدث خطأ أثناء عرض الملف ${filename}: ${e.message}`);
     }
 };
 
-handler.help = ['errorlogs'];
+handler.help = ['viewplugin'];
 handler.tags = ['owner'];
-handler.command = /^(errorlogs|el|باتش)$/i;
+handler.command = /^(viewplugin|vp|باتش-عرض)$/i;
 handler.rowner = true;
 
 export default handler;
