@@ -18,7 +18,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     var res = await yts(text)
     var vid = res.videos[0]
     var q = '128kbps'
-const texto1 = `اغــنيــههة 乂 يـوتـيـوب\n
+const texto1 = `اغــنيــههة 🦈 يـوتـيـوب\n
         ✩ *العنوان ∙* ${vid.title}\n
         ✩ *المده ∙* ${vid.timestamp}\n
         ✩ *المشاهده ∙* ${vid.views}\n
@@ -27,11 +27,11 @@ const texto1 = `اغــنيــههة 乂 يـوتـيـوب\n
         ✩ *الرابط ∙* ${'https://youtu.be/' + vid.videoId}\n`.trim()
 
 await conn.sendButton(m.chat, texto1, wm, res.videos[0].thumbnail, [
-        ['الصوت 📀', `${usedPrefix}mp3 ${text}`],
+        ['الصوت 🦈', `${usedPrefix}mp3 ${text}`],
         ['الفيديو 🎥', `${usedPrefix}mp4 ${text}`], 
-        ['ملف صوتي 📀', `.mp3doc ${text}`], 
+        ['ملف صوتي 🦈', `.mp3doc ${text}`], 
         ['ملف فيديو 🎥', `.mp4doc ${text}`] 
-  ], null, [['لينك شاتي🐍', `https://wa.me/201208386317`]], m)
+  ], null, [['لينك شاتي🐍', `https://wa.me/201028085788`]], m)
           }
 
             if (command == "mp3") {
@@ -251,6 +251,6 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
 }
 handler.help = ["play"].map(v => v + " <formato> <búsqueda>")
 handler.tags = ["downloader"]
-handler.command = ['اغنيه', 'play2', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
+handler.command = ['اغنيه', 'شغل', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
 handler.star = 2
 export default handler
