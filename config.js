@@ -11,21 +11,21 @@ global.botnumber = ""
 global.confirmCode = ""
 
 global.owner = [
-  ['201028085788', '❯⏐  𝐸𝐿𝐴𝐾𝑅𝐴𝐵 ', true],
-  ['201028085788'],
-  ['201028085788'],
-  ['201028085788']
+  ['212658594530', '❯⏐SENKU DEVELOPER ', true],
+  ['212658594530'],
+  ['212658594530'],
+  ['212658594530']
 ];
 
-global.suittag = ['201028085788'];
-global.prems = ['201028085788'];
-global.packname = '❯⏐ elakreb ';
-global.author = '> ❯⏐ 𝐁𝐨𝐭';
-global.wm = '> 𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵';
-global.titulowm = ' 𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵';
-global.titulowm2 = `>𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵`
-global.igfg = '> ❯⏐ 𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵';
-global.wait = '*[ ⏳ ]  _جاري التحميل•_*    https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f';
+global.suittag = ['212658594530'];
+global.prems = ['212658594530'];
+global.packname = '❯⏐ SENKU BOT';
+global.author = '❯⏐ SENKU BOT';
+global.wm = '❯⏐ SENKU BOT';
+global.titulowm = ' ❯⏐ SENKU BOT';
+global.titulowm2 = `>𝐵𝛩𝑇 SENKU`
+global.igfg = '> ❯⏐ 𝐵𝛩𝑇 SENKU';
+global.wait = '*[ ⏳ ]  _جاري التحميل•_*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
@@ -53,10 +53,10 @@ global.gt = '> ❯⏐ 𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵🎀';
 global.mysticbot = '> ❯⏐  𝐵𝛩𝑇 𝐸𝐿𝐴𝐾𝑅𝐴𝐵🎀';
 global.md = 'https://atom.bio/elakrabelyotyobr';
 global.mysticbot = 'https://atom.bio/elakrabelyotyobr';
-global.waitt = '*[ ⏳ ]  _جاري التحميل•_*    https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f';
-global.waittt = '*[ ⏳ ]  _جاري التحميل•_*    https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f';
-global.waitttt = '*[ ⏳ ]  _جاري التحميل•_*    https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f';
-global.nomorown = '201028085788';
+global.waitt = '*[ ⏳ ]  _جاري التحميل•_* ';
+global.waittt = '*[ ⏳ ]  _جاري التحميل•_*    ';
+global.waitttt = '*[ ⏳ ]  _جاري التحميل•_*    ';
+global.nomorown = '+212658594530';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
